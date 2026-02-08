@@ -57,3 +57,6 @@ During a routine update of the **Hopper Roadside Dashboard** on the production s
    │              │              │              │
    └──────────────┘              └──────────────┘
 ```
+
+Back to **[Case Study Report](./GIT_DEADLOCK.md)**
+Back to **[Conflict Resolution](./GIT_DIAGRAM.md)**

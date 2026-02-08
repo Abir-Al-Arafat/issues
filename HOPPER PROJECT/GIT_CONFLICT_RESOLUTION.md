@@ -24,3 +24,4 @@ When Git says `fatal: Need to specify how to reconcile divergent branches`, it i
 ---
 
 Back to **[Case Study Report](./GIT_DEADLOCK.md)**
+Back to **[Diagram](./GIT_DIAGRAM.md)**

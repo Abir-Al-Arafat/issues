@@ -47,3 +47,4 @@ This experience reinforced the importance of:
 - Staying calm under terminal-level "fatal" errors to ensure data integrity.
 
 diagram of the problem **[Case Study Report](./GIT_DIAGRAM.md)**
+diagram of the problem **[Case Study Report](./GIT_CONFLICT_RESOLUTION.md)**
