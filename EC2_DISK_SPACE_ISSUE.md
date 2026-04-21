@@ -1,4 +1,4 @@
-# Guide: Deploying React/Next.js Projects on AWS EC2
+# Guide: EC2 DISK SPACE ISSUE
 
 This guide outlines the step-by-step process for identifying disk space issues, expanding EBS storage on AWS, and setting up the environment for deploying React/Next.js applications.
 
