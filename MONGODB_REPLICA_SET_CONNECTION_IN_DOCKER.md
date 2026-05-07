@@ -85,7 +85,13 @@ docker run -d \
 
 ---
 
-## 3. Summary Checklist
+## <a name="3-the-docker-localhost-trap"></a> 4. The Docker Localhost Trap
+
+As discovered during troubleshooting, if the **[Replica Set](./MONGODB_REPLICA_SETS_AND_CONNECTION_STRINGS.md)** internally identifies as `127.0.0.1`, the connection handshake will fail. By using `rs.reconfig()`, we ensure the "GPS" of the database points to the actual EC2 Network IP, allowing the Docker container to "exit" its own local network and reach the host database.
+
+---
+
+## 5. Summary Checklist
 
 - **Binding:** MongoDB is bound to the EC2 Private IP in `mongod.conf`.
 - **Replica Set:** The member host is set to the EC2 Private IP in `rs.conf()` (check using `rs.status()`).
