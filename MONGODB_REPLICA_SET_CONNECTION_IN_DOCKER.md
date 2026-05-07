@@ -13,12 +13,14 @@ Even after updating the `DATABASE_URL` in the `.env` file to use the EC2 private
 
 ### Root Cause
 
-In a Docker environment, `127.0.0.1` refers to the container itself. When your application connects to a MongoDB Replica Set:
+In a Docker environment, `127.0.0.1` refers to the container itself. When your application connects to a MongoDB **[Replica Set](./MONGODB_REPLICA_SETS_AND_CONNECTION_STRINGS.md)**:
 
 1.  The app initially connects to the seed IP provided in your environment variables (e.g., `172.31.4.74`).
 2.  MongoDB responds with its internal **Replica Set Configuration**.
 3.  If that internal configuration identifies the primary node as `localhost` or `127.0.0.1`, the database tells the application: "I am actually at 127.0.0.1".
 4.  The application then attempts to switch its connection to `127.0.0.1` **inside the container**, where no database exists, leading to a crash.
+
+> **Read more:** [Why does the Replica Set return 127.0.0.1?](#3-the-docker-localhost-trap)
 
 ---
 
